@@ -26,7 +26,7 @@
 * {
 	color: white;
 }
-@media (min-width: 481px){
+@media only screen and (min-width: 481px){
 .posts_index {
 	height: 180px;
 	color: white;
@@ -91,7 +91,7 @@ margin: 0px;
 .testing{
 	font-family: "San Francisco Display Medium";
 }
-@media (max-width: 480px;) {
+@media only screen and (max-width: 480px;) {
 .posts_index {
 	height: 180px;
 	color: white;
@@ -105,7 +105,7 @@ margin: 0px;
 	font-size: 25px;
 }
 }
-@media (max-width: 414px;) {
+@media only screen and (max-width: 414px;) {
 .posts_index {
 	height: 180px;
 	color: white;
@@ -119,7 +119,7 @@ margin: 0px;
 	font-size: 20px;
 }
 }
-@media (max-width: 375px;) {
+@media only screen and (max-width: 375px;) {
 .posts_index {
 	height: 180px;
 	color: white;
@@ -133,7 +133,7 @@ margin: 0px;
 	font-size: 15px;
 }
 }
-@media (max-width: 320px;) {
+@media only screen and (max-width: 320px;) {
 .posts_index {
 	height: 180px;
 	color: white;
