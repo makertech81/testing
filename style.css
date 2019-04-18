@@ -26,7 +26,7 @@
 * {
 	color: white;
 }
-
+@media (min-width: 481px){
 .posts_index {
 	height: 180px;
 	color: white;
@@ -39,7 +39,7 @@
 	font-family: "San Francisco Display Ultralight";
 	font-size: 50px;
 }
-
+}
 * {
 	box-sizing: border-box;
 }
@@ -91,7 +91,7 @@ margin: 0px;
 .testing{
 	font-family: "San Francisco Display Medium";
 }
-@media and (max-width: 480px;) {
+@media (max-width: 480px;) {
 .posts_index {
 	height: 180px;
 	color: white;
