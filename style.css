@@ -59,6 +59,8 @@
 	bottom: 0px;
 	font-size: 24px;
 	font-family: "San Francisco Display Thin";
+	width: 100%;
+	text-align: center;
 }
 body {
 	background-color: black;
@@ -69,15 +71,19 @@ h1 {
 	margin: 2.5px;
 	/*   color: gray;*/
 	font-size: 80px;
+	text-align: center;
 }
 .typewrite {
 	text-decoration: none;
 	color: black;
 	pointer-events: none;
 	cursor: default;
-	padding-left: 100px;
+	/* padding-left: 100px; */
 	font-size: 20px;
 	font-family: "San Francisco Display Medium";
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
 .nuhah {
 	text-decoration: none;
