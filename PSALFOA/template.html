@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PSALFOA - Home</title>
+    <link rel="stylesheet" type="text/css" href="media.css">
+</head>
+
+<body>
+    <a id="img3" onclick="sideBar();"><img src="football.png"></a>
+    <a href="index.html" id="img1"><img id="image" src="PSAL.png">
+            <br>
+            <br>Public School Athletic League Football Officials Association Inc.</a>
+    <div id="sideBar" class="sidenav">
+        <a id="img2" onclick="sideBar2();"><img style="padding-left: 15vw;"src="cancel.png"></a>
+        <div id="weird"></div>
+        <ul id="navBar" style="list-style: none;">
+            <li id="first"><a href="index.html">Home</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="meetings.html">Meetings</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="officials.html">Official's Corner</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+ 
+</body>
+<script>
+        function sideBar() {
+            document.getElementById("sideBar").style.left = "0vw";
+        }
+        function sideBar2() {
+            document.getElementById("sideBar").style.left = "-25vw";
+        }
+    </script>
+</html>
