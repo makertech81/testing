@@ -1,8 +1,8 @@
 $(function() {
 	$(".posts_index p").each(function(i, elt) {
 		$(elt).css({
-			left: Math.random() * window.innerWidth - 25,
-			top: Math.random() * window.innerHeight - 25
+			left: Math.random() * window.innerWidth - 200,
+			top: Math.random() * window.innerHeight - 75
 		});
 	});
 });
