@@ -22,18 +22,18 @@
      color: white;
 }
  #img1 {
-     font-size: 14px 
+     font-size: 18px 
 }
  #weird{
-     padding-bottom: 5vh;
+     padding-bottom: 6vh;
 }
  #navBar{
      padding-left: 0;
 }
  #navBar li {
-     padding-bottom: 7vh;
+     padding-bottom: 6vh;
 }
- .main {
+.main {
      left: 44vw;
      top: 40vh;
      position: absolute;
