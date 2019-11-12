@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap');
+ .sidenav {
+     height: 100%;
+     width: 25vw;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: -25vw;
+     background-color: #1A1A1A;
+     overflow-x: hidden;
+     padding-top: 3vh;
+     font-family: 'Raleway', sans-serif;
+     text-align: center;
+}
+ #sideBar {
+     transition: left 0.3s;
+}
+ #imagetxt {
+}
+ .sidenav a {
+     text-decoration: none;
+     color: white;
+}
+table {
+}
+#videos {
+    margin-top: 20vh;
+}
+
+ #img1 {
+     font-family: 'Raleway', sans-serif;
+     color: white;
+     text-decoration: none;
+     font-size: 14px;
+     position: absolute;
+     left: 36vw;
+     text-align: center;
+}
+
+
+
+#img2{
+    width: 50px;
+    height: 50px;
+}
+#img3{
+    padding-left: 2.5vw;
+}
+#first {
+    padding-top: 7vh;
+}
+ #weird{
+     padding-bottom: 5vh;
+}
+
+ #navBar{
+     padding-left: 0;
+}
+ #navBar li {
+     padding-bottom: 7vh;
+}
+ .main {
+     left: 44vw;
+     top: 40vh;
+     position: absolute;
+     border-radius: 15px;
+     width:35vw;
+     height:20vh;
+     margin:10px;
+     padding:10px;
+     background-color: #1E1E1B;
+    /* box-shadow: 5px 5px 2.5px black;
+    */
+}
+ #maintxt1{
+     font-family: 'Raleway', sans-serif;
+     color: white;
+     position: relative;
+     top: 15%;
+     text-align: center;
+     -webkit-animation-name: fadeout;
+     -webkit-animation-duration: 4s;
+     -webkit-animation-delay: 3s;
+     animation-fill-mode:forwards;
+}
+ @keyframes fadeout {
+     0% {
+         opacity: 1;
+    }
+     25% {
+         opacity: 0;
+    }
+     50% {
+         opacity: 0;
+    }
+     100% {
+         opacity: 1;
+    }
+}
+ #box {
+}
+ body {
+    /*background-color: white;
+    */
+     background-color: #7A1711;
