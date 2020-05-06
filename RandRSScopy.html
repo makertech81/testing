@@ -1,0 +1,141 @@
+<html>
+<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+<a href="" id="a"><p id="p"></p></a>
+<input type="text" id="textbox">
+<button onclick="myFunction()" id="button">go</button>
+<script>
+document.getElementById("textbox")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("button").click();
+    }
+});
+  //const p = document.getElementById('p')
+  function myFunction() {
+
+    // Removes an element from the document
+   function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+  	function fadeOutEffect1() {
+    var fadeTarget = document.getElementById("textbox");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.01;
+        } else {
+        	fadeTarget.parentNode.removeChild(fadeTarget);
+            clearInterval(fadeEffect);
+            
+        }
+     
+    }, 1);
+}
+function fadeOutEffect2() {
+    var fadeTarget = document.getElementById("button");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.01;
+        } else {
+        	fadeTarget.parentNode.removeChild(fadeTarget);
+            clearInterval(fadeEffect);
+            
+        }
+         }, 1);
+}
+fadeOutEffect1()
+fadeOutEffect2()
+sleep(500)
+var url = document.getElementById("textbox").value;
+function test(){
+
+
+
+  
+
+  feednami.loadGoogleFormat(url,function(result){
+  	//p.value = ''
+    if(result.error){
+      console.log(result.error)
+    }
+    else{
+      var entries = result.feed.entries
+      //for(var i = 0; i < entries.length; i++){
+        var entry = entries[Math.floor(Math.random()*entries.length)]
+        document.getElementById("p").innerHTML = entry.title
+        document.getElementById("a").href = entry.link
+       // document.write(entry.contentSnippet) 
+        // the first 120 characters of the entry
+     // }
+    }
+    })
+}
+test()
+function addDoc() {
+  document.addEventListener('click', () => test());
+}
+setTimeout(addDoc, 550)
+}
+</script>
+<style>
+html{
+	background-color: #66ccff;
+}
+a{
+	text-decoration: none;
+	font-size: 5vw;
+	position: absolute; /* taken out of the normal flow of the document */
+ 	top: 50%; /* moved down by 50% of the screen height */
+ 	transform: translateY(-50%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+ 	width: 100%; /* needs to be defined to keep the default block behavior */
+	text-align: center;
+	margin: 0; /* again, for perfect center */
+	color: white;
+	font-family: 'Baloo Thambi', cursive;
+}
+input{
+	font-size: 2vw;
+	position: absolute; /* taken out of the normal flow of the document */
+ 	top: 50%; /* moved down by 50% of the screen height */
+ 	transform: translateY(-50%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+ 	width: 40%; /* needs to be defined to keep the default block behavior */
+ 	left: 42%; /* moved down by 50% of the screen height */
+ 	transform: translateX(-42%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+	margin: 0; /* again, for perfect center */
+	color: black;
+	font-family: 'Baloo Thambi', cursive;
+	border:none;
+	outline: none;
+}
+button{
+	font-size: 2vw;
+
+position: absolute; /* taken out of the normal flow of the document */
+ 	top: 49.9%; /* moved down by 50% of the screen height */
+ 	transform: translateY(-49.9%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+ /* needs to be defined to keep the default block behavior */
+ 	left: 72%; /* moved down by 50% of the screen height */
+ 	transform: translateX(-72%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+	margin: 0; /* again, for perfect center */
+    width: 7%;
+    border:none;
+    outline: none;
+    font-family: 'Baloo Thambi', cursive;
+    color: white;
+    background-color: #0099ff;
+}
+</style>
+</html>

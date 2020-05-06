@@ -1,8 +1,41 @@
 $(function() {
 	$(".posts_index p").each(function(i, elt) {
+		var width = Math.random() * (window.innerWidth);
+	    var height = Math.random() * (window.innerHeight);
+	    var greaterWidth = true;
+	    var greaterHeight = true;
+	    var lessWidth = true;
+	    var lessHeight = true;
+	    while (greaterWidth === true || greaterHeight === true ||  lessWidth === true || lessHeight === true) {
+	    	if (width>(window.innerWidth*.80)) {
+	    		width = Math.random() * (window.innerWidth);
+	    		greaterWidth = true;
+	    	} else{
+	    		greaterWidth = false;
+	    	}
+	    	if (height>(window.innerHeight*.80)) {
+	    		height = Math.random() * (window.innerHeight);
+	    		greaterHeight = true;
+	    	} else{
+	    		greaterHeight = false;
+	    	}
+	    	if (width<(window.innerWidth*.20)) {
+	    		width = Math.random() * (window.innerWidth);
+	    		lessWidth = true;
+	    	} else{
+	    		lessWidth = false;
+	    	}
+	    	if (height<(window.innerHeight*.20)) {
+	    		height = Math.random() * (window.innerHeight);
+	    		lessHeight = true;
+	    	} else{
+	    		lessHeight = false;
+	    	}
+		}
 		$(elt).css({
-			left: Math.random() * window.innerWidth - 200,
-			top: Math.random() * window.innerHeight - 75
+
+			left: width,
+			top: height
 		});
 	});
 });
